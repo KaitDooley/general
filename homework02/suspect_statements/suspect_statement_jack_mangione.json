@@ -20,7 +20,7 @@
             {"time": "21:40 PM", "location": "Bathroom", "activity": "Taking her dog for a walk"},
             {"time": "21:50 PM", "location": "Living Room", "activity": "Returning to mingle with guests"},
             {"time": "22:00 PM", "location": "Bathroom", "activity": "Reading a novel quietly"},
-            {"time": "22:10 PM", "location": "Bathroom", "activity": "Reading a novel quietly"}]
+            {"time": "22:10 PM", "location": "Bathroom", "activity": "Reading a novel quietly"}],
 	"gps_data": [
         {
             "time": "19:00 PM",
