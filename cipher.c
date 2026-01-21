@@ -11,8 +11,8 @@ int main() {
         exit(EXIT_FAILURE);
     }
 
-	char enc[BUFSIZ];
-	char str[BUFSIZ];
+	char enc[101];
+	char str[101];
 
 	while (fgets(enc, sizeof(enc), fp) && fgets(str, sizeof(str), fp)) {
 		int valid = 1;
