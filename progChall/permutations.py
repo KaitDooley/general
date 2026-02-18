@@ -36,9 +36,8 @@ def permutations(p: list[str], c: set[str]) -> None:
             c.add(candidate)
             p.pop()
 '''
-            
-
-# Easy way
+    -1 + -1 + 2
+-1 + 0 + 1# Easy way
 '''
 import itertools
 
