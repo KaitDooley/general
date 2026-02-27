@@ -1,12 +1,7 @@
 #!/usr/bin/env python3
-'''
-DES Decryption Implementation
-Problem 6 - CSE 40567 Spring 2026
-'''
 import sys
 
 # Tables
-
 PC1 = [57,49,41,33,25,17, 9,
         1,58,50,42,34,26,18,
        10, 2,59,51,43,35,27,
@@ -109,7 +104,6 @@ IP_INV = [40,8,48,16,56,24,64,32,
           33,1,41, 9,49,17,57,25]
 
 # Functions
-
 def permute(bits, table):
     return [bits[t-1] for t in table]
 
@@ -136,7 +130,6 @@ def int_to_bits(n, length):
 
 
 def generate_round_keys(key_bits):
-    """Generate 16 48-bit round keys from 64-bit key."""
     key56 = permute(key_bits, PC1)
     print(f"K+ = {bits_to_str(key56)}")
     C = key56[:28]
@@ -175,7 +168,6 @@ def decrypt_des(ciphertext_bits, round_keys):
     print(f"L0 = {bits_to_str(L)}")
     print(f"R0 = {bits_to_str(R)}")
     
-    # Apply keys in reverse order
     for i in range(16):
         K = round_keys[15 - i]  # Reverse key order for decryption
         f_out = f_function(R, K)
@@ -188,16 +180,12 @@ def decrypt_des(ciphertext_bits, round_keys):
         print(f"  L{i+1}     = {bits_to_str(L)}")
         print(f"  R{i+1}     = {bits_to_str(R)}")
     
-    # Final permutation (swap L and R first)
     combined = R + L
     result = permute(combined, IP_INV)
     return result
 
 # Main Execution
-
 def main():
-    
-    # Input
     ciphertext = "1100101011101101101000100110010101011111101101110011100001110011"
     key        = "0100110001001111010101100100010101000011010100110100111001000100"
     print(f"Ciphertext: {ciphertext}")
