@@ -33,7 +33,7 @@ def walk_graph_dfs_rec(graph: Graph, v: int, visited: set[int]) -> None:
 
     # Recursive step:
     for neighbor in graph[v]:
-        walk_graph_dfs_rec(graph, neighbot, visitied)
+        walk_graph_dfs_rec(graph, neighbor, visitied)
 
 def walk_graph_dfs_iter(graph: Graph, v: int) -> None:
     ''' Walk graph using DFS (iterative) '''
@@ -46,7 +46,7 @@ def walk_graph_dfs_iter(graph: Graph, v: int) -> None:
             continue
         visited.add(curr)
         print(curr)
-
+        
         for neighbor in graph[curr]:
             if neighbor in visited:
                 continue
